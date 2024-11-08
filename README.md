@@ -2,7 +2,7 @@
 ### Intelligent Document Analysis & Summarization Tool
 
 ## Overview
-This Python-based tool automatically processes PDF documents, identifies sections based on text formatting, and generates intelligent summaries using a Local Large Language Model (LLM). The summaries are then compiled into a well-structured Word document.
+This Python-based tool automatically processes large PDF documents, identifies sections based on text formatting, and generates intelligent summaries using a Local Large Language Model (LLM). The summaries are then compiled into a well-structured Word document.
 
 ## Features
 - PDF text extraction with formatting awareness
@@ -33,13 +33,13 @@ read_pdf_and_summarize("input.pdf", "output.docx", start_page=5)
 ```
 
 ## API Configuration
-The tool requires a local LLM API running on port 1234. But you could also use an external API.
+The tool requires a local LLM API running on port 1234., you could also use an external API, but a local one is preferred because of costs because we are working with very big pdf files.
 
 
 ## Text Processing Rules
 - Sections are identified by font size > 13
 - Minimum 35 words required for summarization
-- Text chunks limited to 1900 words per API call
+- Text chunks limited to 1900 words per API call so you are not exceeding with your tokens the context wimdow 
 
 ## Error Handling
 - JSON decode error management
